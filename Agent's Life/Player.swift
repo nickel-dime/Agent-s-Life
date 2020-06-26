@@ -24,4 +24,23 @@ struct Player: Identifiable {
     var stat4 = Int.random(in: 20...80)
     var stat5 = Int.random(in: 20...80)
     
+    var averageGrade: String {
+        let average = (stat1 + stat2 + stat3 + stat4 + stat5) / 5
+        
+        if (average < 30) {
+            return "F"
+        } else if (average < 40) {
+            return "D"
+        } else if (average < 50) {
+            return "C"
+        } else if (average < 60) {
+            return "B"
+        } else if (average < 70) {
+            return "A"
+        } else if (average < 80) {
+            return "A+"
+        } else {
+            return "ERROR"
+        }
+    }
 }

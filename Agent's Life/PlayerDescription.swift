@@ -19,6 +19,8 @@ struct PlayerDescription: View {
             Text("Speed: \(player.stat3)")
             Text("Fielding: \(player.stat4)")
             Text("Throwing: \(player.stat5)")
+            Text("Grade: \(player.averageGrade)")
+
         }
         .navigationBarTitle(Text(player.name), displayMode: .inline)
     }
