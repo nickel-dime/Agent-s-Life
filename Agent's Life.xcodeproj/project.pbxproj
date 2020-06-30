@@ -16,6 +16,8 @@
 		A55EA1F424A5BF7500DF3D06 /* PlayerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EA1F324A5BF7500DF3D06 /* PlayerList.swift */; };
 		A55EA1F624A5C01C00DF3D06 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EA1F524A5C01C00DF3D06 /* Player.swift */; };
 		A55EA1F824A5C67E00DF3D06 /* PlayerDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EA1F724A5C67E00DF3D06 /* PlayerDescription.swift */; };
+		A55EA25324AACEE700DF3D06 /* AgentsLife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A55EA25124AACEE700DF3D06 /* AgentsLife.xcdatamodeld */; };
+		A55EA25524AACF1C00DF3D06 /* AddPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55EA25424AACF1C00DF3D06 /* AddPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A55EA1F324A5BF7500DF3D06 /* PlayerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerList.swift; sourceTree = "<group>"; };
 		A55EA1F524A5C01C00DF3D06 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		A55EA1F724A5C67E00DF3D06 /* PlayerDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDescription.swift; sourceTree = "<group>"; };
+		A55EA25224AACEE700DF3D06 /* AgentsLife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AgentsLife.xcdatamodel; sourceTree = "<group>"; };
+		A55EA25424AACF1C00DF3D06 /* AddPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +71,10 @@
 				A55EA1D524A5BCC200DF3D06 /* AppDelegate.swift */,
 				A55EA1D724A5BCC200DF3D06 /* SceneDelegate.swift */,
 				A55EA1D924A5BCC200DF3D06 /* ContentView.swift */,
+				A55EA25424AACF1C00DF3D06 /* AddPlayer.swift */,
 				A55EA1F724A5C67E00DF3D06 /* PlayerDescription.swift */,
 				A55EA1DB24A5BCC400DF3D06 /* Assets.xcassets */,
+				A55EA25124AACEE700DF3D06 /* AgentsLife.xcdatamodeld */,
 				A55EA1E024A5BCC400DF3D06 /* LaunchScreen.storyboard */,
 				A55EA1E324A5BCC400DF3D06 /* Info.plist */,
 				A55EA1DD24A5BCC400DF3D06 /* Preview Content */,
@@ -155,11 +161,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55EA25524AACF1C00DF3D06 /* AddPlayer.swift in Sources */,
 				A55EA1D624A5BCC200DF3D06 /* AppDelegate.swift in Sources */,
 				A55EA1F824A5C67E00DF3D06 /* PlayerDescription.swift in Sources */,
 				A55EA1D824A5BCC200DF3D06 /* SceneDelegate.swift in Sources */,
 				A55EA1DA24A5BCC200DF3D06 /* ContentView.swift in Sources */,
 				A55EA1F624A5C01C00DF3D06 /* Player.swift in Sources */,
+				A55EA25324AACEE700DF3D06 /* AgentsLife.xcdatamodeld in Sources */,
 				A55EA1F424A5BF7500DF3D06 /* PlayerList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A55EA25124AACEE700DF3D06 /* AgentsLife.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A55EA25224AACEE700DF3D06 /* AgentsLife.xcdatamodel */,
+			);
+			currentVersion = A55EA25224AACEE700DF3D06 /* AgentsLife.xcdatamodel */;
+			path = AgentsLife.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A55EA1CA24A5BCC200DF3D06 /* Project object */;
 }

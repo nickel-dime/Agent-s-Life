@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.presentationMode) var presentation
     
+    @ObservedObject var players = PlayerList(amount: 0)
+    @State var addPlayer = false
     
-    var players = PlayerList(amount: 10)
-    
+    // change NavigationLink to a playerdescription screen when you own a player
     
     var body: some View {
         NavigationView {
@@ -20,22 +22,34 @@ struct ContentView: View {
                 List {
                     Section(header: Text("Hitter")) {
                         ForEach(players.hitters) { hitters in
-                            NavigationLink(destination: PlayerDescription(player: hitters)) {
+                            NavigationLink(destination: PlayerDescription(player: hitters, existingPlayers: self.players)) {
                                 Text("\(hitters.name)")
                             }
                         }
                     }
                     Section(header: Text("Pitcher")) {
                         ForEach(players.pitchers) { pitcher in
-                            NavigationLink(destination: PlayerDescription(player: pitcher)) {
+                            NavigationLink(destination: PlayerDescription(player: pitcher, existingPlayers: self.players)) {
                                 Text("\(pitcher.name)")
                             }
                         }
                     }
+
                 }
-                
             }
             .navigationBarTitle("Agent's Life")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.addPlayer.toggle()
+                }) {
+                    Image(systemName: "plus")
+                })
+                .sheet(isPresented: $addPlayer) {
+                    VStack {
+                        AddPlayer(existingPlayers: self.players)
+                    }
+                    .navigationBarTitle("Agent's Life")
+            }
         }
     }
 }
